@@ -1,6 +1,6 @@
 {
-    "name": "My PWA",
-    "short_name": "Autostar - car configurator",
+    "name": "Autostar - car configurator",
+    "short_name": "Autostar",
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#ffffff",
