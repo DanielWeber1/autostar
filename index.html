@@ -6,8 +6,8 @@
   <title>Auto 1</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="manifest" href="/manifest.json">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 <body>
   <div style="display: flex; justify-content: space-between; height: 50px;">
@@ -16,19 +16,33 @@
       <p style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">MENU</p>
     </button>
   </div>
-  <div id="page">
-    
-    <div id="models">
 
+  <!-- Modální okno pro zadání PINu -->
+  <div id="pin-modal" class="modal">
+    <div class="modal-content">
+      <p>Zadejte PIN:</p>
+      <input type="password" id="pin-input" maxlength="4">
+      <button id="pin-submit">Potvrdit</button>
     </div>
-    
+  </div>
 
+  <!-- Menu, které se zobrazí po správném PINu -->
+  <div id="menu" class="hidden">
+    <ul>
+      <li><a href="#">Stránka 1</a></li>
+      <li><a href="#">Stránka 2</a></li>
+      <li><a href="#">Stránka 3</a></li>
+    </ul>
+  </div>
+
+  <div id="page">
+    <div id="models"></div>
     <div id="configurator-price">
       <div id="configurator">
         <div id="wheels">
-           <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button>
-           <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button> 
-           <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button> 
+          <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button>
+          <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button> 
+          <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button> 
         </div>
         <div id="colors">
           <button class="barva"><div style="background-color: red; width: 70px; height: 70px; border-radius: 50px;"></div></button>
@@ -42,6 +56,7 @@
       </div>
     </div>
   </div>
-    
+
+  <script src="script.js"></script>
 </body>
 </html>
