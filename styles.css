@@ -1,47 +1,106 @@
 body {
   background-color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Moderní font */
 }
 
 #menu-button {
   width: 100px; 
   height: 50px;
-  border-radius: 10px;
+  border-radius: 20px; /* Zaoblenější okraje */
   margin-right: 5px;
   margin-top: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(145deg, #6e7dff, #5560ea); /* Gradient pro moderní vzhled */
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Jemný stín pro tlačítko */
+  transition: all 0.3s ease; /* Plynulý přechod */
 }
 
-/* Modální okno */
+#menu-button:hover {
+  background: linear-gradient(145deg, #5560ea, #6e7dff); /* Změna barvy při hover */
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15); /* Zvýšení stínu při hover */
+}
+
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
 }
 
 .modal-content {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 15px;
   text-align: center;
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Stín kolem okna */
+  animation: fadeIn 0.5s ease-out; /* Animace při zobrazení */
 }
 
-/* Skryté menu */
-.hidden {
-  display: none;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease; /* Plynulý přechod při zaostření */
+}
+
+.modal input[type="text"]:focus {
+  border-color: #6e7dff;
+  outline: none;
+}
+
+.modal button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #6e7dff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #5560ea;
 }
 
 #menu {
-  background: #eee;
-  padding: 10px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 15px;
   margin-top: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#menu.hidden {
+  display: none;
 }
 
 #menu ul {
@@ -50,14 +109,22 @@ body {
 }
 
 #menu li {
-  padding: 5px 0;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+#menu li:hover {
+  color: #6e7dff;
+  transform: translateX(10px);
 }
 
 #models {
   border-style: solid;
   width: 750px;
   height: 400px;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: rgb(68, 66, 66);
 }
 
@@ -72,7 +139,7 @@ body {
 
 #configurator {
   width: 450px;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,16 +154,23 @@ body {
 
 .kolo, .barva {
   width: 100px;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #f0f0f0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.kolo:hover, .barva:hover {
+  background: #dcdcdc;
 }
 
 #price {
   border-style: solid;
   width: 230px;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;

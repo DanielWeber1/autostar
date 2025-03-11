@@ -1,1 +1,3 @@
 .DS_Store
+
+#secrets.json // zatím nechám zakomentované, až půjde do produkce tak bude potřeba aby se odpkomentovalo a hesla se už na git naukládala.
