@@ -72,17 +72,19 @@
 
       <!--DIV S RADIO BUTTONY NA VÝBĚR TYPU PŘEVODOVKY-->
       <div id="transmission">
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <input style="transform: scale(2.5); margin-top: 10px;" id="automatic-transmission" name="volba" type="radio" checked> <label style="font-size: 40px;" for="automatic-transmission">Automatická převodovka</label>
-        </div>
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <input style="transform: scale(2.5); margin-top: 10px;" id="manual-transmission" name="volba" type="radio"> <label style="font-size: 40px;" for="manual-transmission">Manuální převodovka</label>
-        </div>
+        <label style="display: flex; align-items: center; gap: 15px;">
+          <input id="automatic-transmission" name="volba" type="radio" value="automatic-transmission" checked> 
+          <span class="custom-radio">Automatická převodovka</span>
+        </label>
+        <label style="display: flex; align-items: center; gap: 15px;">
+          <input id="manual-transmission" name="volba" type="radio" value="manual-transmission"> 
+          <span class="custom-radio">Manuální převodovka</span>
+        </label>
      </div>
 
      <!--DIV S CELKOVOU CENOU KONFIGURACE-->
       <div id="price">
-        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px;margin-left: 20px;">CENA:</p>
+        <p style="font-size: 50px;margin-left: 20px;">CENA:</p>
         <p id="total-price">500 000 Kč</p>
       </div>
     </div>
