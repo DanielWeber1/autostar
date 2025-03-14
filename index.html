@@ -10,10 +10,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 <body>
-  <div style="display: flex; justify-content: space-between; height: 50px;">
-    <img style="margin-left: 5px;" src="images/logo-black.png" alt="">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <img style="margin-left: 5px; width: 300px; height: 80px;" src="images/logo-black.png" alt="">
     <button id="menu-button">
-      <p style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">MENU</p>
+      <p>MENU</p>
     </button>
   </div>
 
@@ -36,26 +36,68 @@
   </div>
 
   <div id="page">
-    <div id="models"></div>
+    <!--DIV NA FOTKY AUT-->
+    <div id="models">
+      <div class="slideshow-container">
+        <img class="slide active" src="images/auto 1/iris.png" alt="Slide 1">
+        <img class="slide" src="images/auto 1/iris (1).png" alt="Slide 2">
+        <img class="slide" src="images/auto 1/iris (2).png" alt="Slide 3">
+    
+        <!-- Tlačítka pro posouvání -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!--SPODNÍ DIV S KONFIGURACÍ AUTA A CENOU-->
     <div id="configurator-price">
+
+      <!--DIV NA KONFIGURACI AUTA-->
       <div id="configurator">
+
+        <!--DIV S KOLY-->
         <div id="wheels">
           <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button>
           <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button> 
           <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button> 
         </div>
+
+        <!--DIV S BARVAMI-->
         <div id="colors">
-          <button class="barva"><div style="background-color: red; width: 70px; height: 70px; border-radius: 50px;"></div></button>
-          <button class="barva"><div style="background-color: blue; width: 70px; height: 70px; border-radius: 50px;"></div></button> 
-          <button class="barva"><div style="background-color: green; width: 70px; height: 70px; border-radius: 50px;"></div></button> 
+          <button class="barva" style="background: linear-gradient(135deg, #b1b1b1, #f5f5f5);"></button>
+          <button class="barva" style="background: linear-gradient(135deg, #b00, #f57d7d);"></button> 
+          <button class="barva" style="background: linear-gradient(135deg, #222, #8b8b8b);"></button> 
        </div>
       </div>
+
+      <!--DIV S RADIO BUTTONY NA VÝBĚR TYPU PŘEVODOVKY-->
+      <div id="transmission">
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <input style="transform: scale(2.5); margin-top: 10px;" id="automatic-transmission" name="volba" type="radio" checked> <label style="font-size: 40px;" for="automatic-transmission">Automatická převodovka</label>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <input style="transform: scale(2.5); margin-top: 10px;" id="manual-transmission" name="volba" type="radio"> <label style="font-size: 40px;" for="manual-transmission">Manuální převodovka</label>
+        </div>
+     </div>
+
+     <!--DIV S CELKOVOU CENOU KONFIGURACE-->
       <div id="price">
-        <p style="font-family: Arial, Helvetica, sans-serif; font-size: 23px;">CELKOVÁ CENA:</p>
-        <p style="font-family: Arial, Helvetica, sans-serif; font-size: 35px;">500000 Kč</p>
+        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px;margin-left: 20px;">CENA:</p>
+        <p id="total-price">500 000 Kč</p>
       </div>
     </div>
   </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function changeSlide(direction) {
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>

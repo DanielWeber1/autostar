@@ -1,30 +1,29 @@
-body {
+body 
+{
   background-color: rgb(255, 255, 255);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Moderní font */
 }
 
-#menu-button {
-  width: 100px; 
-  height: 50px;
-  border-radius: 20px; /* Zaoblenější okraje */
+#menu-button 
+{
+  width: 200px; 
+  height: 80px;
+  border-style: none;
   margin-right: 5px;
   margin-top: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, #6e7dff, #5560ea); /* Gradient pro moderní vzhled */
-  color: white;
+  /*background: linear-gradient(145deg, #6e7dff, #5560ea); /* Gradient pro moderní vzhled */
+  background-color: white;
   font-weight: bold;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Jemný stín pro tlačítko */
-  transition: all 0.3s ease; /* Plynulý přechod */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  /*clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);*/
 }
 
-#menu-button:hover {
-  background: linear-gradient(145deg, #5560ea, #6e7dff); /* Změna barvy při hover */
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15); /* Zvýšení stínu při hover */
-}
-
-.modal {
+.modal 
+{
   display: none;
   position: fixed;
   top: 50%;
@@ -37,7 +36,8 @@ body {
   align-items: center;
 }
 
-.modal-content {
+.modal-content 
+{
   background: white;
   padding: 30px;
   border-radius: 15px;
@@ -45,21 +45,10 @@ body {
   width: 300px;
   max-width: 90%;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Stín kolem okna */
-  animation: fadeIn 0.5s ease-out; /* Animace při zobrazení */
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.modal input[type="text"] {
+.modal input[type="text"] 
+{
   width: 80%;
   padding: 10px;
   margin-top: 15px;
@@ -68,111 +57,188 @@ body {
   font-size: 16px;
   text-align: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: border 0.3s ease; /* Plynulý přechod při zaostření */
+  
 }
 
-.modal input[type="text"]:focus {
+.modal input[type="text"]:focus 
+{
   border-color: #6e7dff;
   outline: none;
 }
 
-.modal button {
+.modal button 
+{
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #6e7dff;
   color: white;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.modal button:hover {
-  background-color: #5560ea;
-}
-
-#menu {
+#menu 
+{
   background: #f9f9f9;
   padding: 20px;
-  border-radius: 15px;
   margin-top: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#menu.hidden {
+#menu.hidden 
+{
   display: none;
 }
 
-#menu ul {
+#menu ul 
+{
   list-style: none;
   padding: 0;
 }
 
-#menu li {
+#menu li 
+{
   padding: 10px 0;
   font-size: 18px;
   color: #333;
-  transition: all 0.3s ease;
 }
 
-#menu li:hover {
-  color: #6e7dff;
-  transform: translateX(10px);
+/*-------------------------------------------------------------------------*/
+
+#page
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
-#models {
-  border-style: solid;
-  width: 750px;
-  height: 400px;
-  border-radius: 15px;
-  background-color: rgb(68, 66, 66);
+#models 
+{
+  margin-top: 20px;
+  width: 100%;
+  height: 900px;
+  background-color: rgb(170, 170, 170);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
 }
 
-#configurator-price {
-  height: 200px;
-  width: 750px;
+#configurator-price 
+{
+  width: 89%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 50px;
+  height: 450px;
 }
 
-#configurator {
-  width: 450px;
-  border-radius: 15px;
+#configurator 
+{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-#wheels, #colors {
+#wheels, #colors 
+{
   display: flex;
-  height: 90px;
   flex-direction: row;
   justify-content: space-between;
+  width: 800px;
 }
 
-.kolo, .barva {
-  width: 100px;
-  border-radius: 15px;
+#colors
+{
+  margin-bottom: 10px;
+  height: 210px;
+}
+
+.kolo
+{
+  border-style: none;
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f0f0f0;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+  background: rgb(170,170,170);
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.barva
+{
+  border-style: none;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
 }
 
-.kolo:hover, .barva:hover {
-  background: #dcdcdc;
+
+.barva:active 
+{
+  border: 3px solid black;
 }
 
-#price {
-  border-style: solid;
-  width: 230px;
-  border-radius: 15px;
+#transmission
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.radio-button
+{
+  font-size: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#price 
+{
+  border-style: none;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background-color: rgb(170,170,170);
+  clip-path: polygon(14% 0%, 100% 0%, 86% 100%, 0% 100%);
 }
+
+#total-price
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 50px;
+}
+
+
+.slideshow-container {
+  position: relative;
+  width: 2030px;
+  height: 900px;
+}
+
+.slide {
+  display: none;
+  width: 2030px;
+  height: 900px;
+}
+
+.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 50px;
+  font-size: 50px;
+}
+
+.prev { left: 45px; }
+.next { right: 45px; }
