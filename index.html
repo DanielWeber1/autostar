@@ -19,20 +19,20 @@
 
   <!-- Modální okno pro zadání PINu -->
   <div id="pin-modal" class="modal">
-    <div class="modal-content">
+    <div id="pinContent" class="modal-content">
       <p>Zadejte PIN:</p>
       <input type="password" id="pin-input" maxlength="4">
-      <button id="pin-submit">Potvrdit</button>
+      <button id="pin-submit">POTVRDIT</button>
     </div>
   </div>
 
   <!-- Menu, které se zobrazí po správném PINu -->
   <div id="menu" class="hidden">
-    <ul>
-      <li><a href="#">Stránka 1</a></li>
-      <li><a href="#">Stránka 2</a></li>
-      <li><a href="#">Stránka 3</a></li>
-    </ul>
+    <div id="menu-content">
+      <button class="choose-car">NISSAN</button>
+      <button class="choose-car">ARCFOX</button>
+      <button class="choose-car">BAIC</button>
+    </div>
   </div>
 
   <div id="page">
@@ -57,9 +57,9 @@
 
         <!--DIV S KOLY-->
         <div id="wheels">
-          <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button>
-          <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button> 
-          <button class="kolo"><img style="width: 80px;" src="images/kolo1.png" alt=""></button> 
+          <button class="kolo"><img style="width: 300px;" src="images/auto 1/kola/kola1.png" alt=""></button>
+          <button class="kolo"><img style="width: 300px;" src="images/auto 1/kola/kola1.png" alt=""></button> 
+          <button class="kolo"><img style="width: 300px;" src="images/auto 1/kola/kola1.png" alt=""></button> 
         </div>
 
         <!--DIV S BARVAMI-->
@@ -90,16 +90,6 @@
     </div>
   </div>
 
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".slide");
-
-    function changeSlide(direction) {
-      slides[currentSlide].classList.remove("active");
-      currentSlide = (currentSlide + direction + slides.length) % slides.length;
-      slides[currentSlide].classList.add("active");
-    }
-  </script>
 
   <script src="script.js"></script>
 </body>

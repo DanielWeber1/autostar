@@ -22,7 +22,7 @@ fetch('secrets.json')
 
 // Otevření modálního okna při kliknutí na tlačítko menu
 menuButton.addEventListener("click", function () {
-    pinModal.style.display = "block"; 
+    pinModal.style.display = "flex"; 
 });
 
 // Zavření modálního okna při kliknutí mimo něj
@@ -36,9 +36,24 @@ window.addEventListener("click", function (event) {
 pinSubmit.addEventListener("click", function () {
     if (pinInput.value === correctPin) {
         pinModal.style.display = "none"; 
-        menu.classList.remove("hidden"); 
+        menu.style.display = "flex"; 
     } else {
         alert("Špatný PIN!");
         pinInput.value = ""; 
     }
 });
+
+window.addEventListener("click", function (event) {
+    if (event.target === menu) {
+        menu.style.display = "none";
+    }
+});
+
+let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function changeSlide(direction) {
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }
