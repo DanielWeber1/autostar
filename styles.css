@@ -170,6 +170,12 @@ body, div, button, label
   background: rgb(170,170,170);
   clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 }
+
+.kolo:active
+{
+  background-color: #cd1719;
+}
+
 .barva
 {
   border-style: none;
@@ -243,7 +249,7 @@ input[type="radio"]:checked + .custom-radio::before {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   margin-right: 20px;
-  font-size: 50px;
+  font-size: 52px;
 }
 
 

@@ -64,20 +64,20 @@
 
         <!--DIV S BARVAMI-->
         <div id="colors">
-          <button class="barva" style="background: linear-gradient(135deg, #b1b1b1, #f5f5f5);"></button>
-          <button class="barva" style="background: linear-gradient(135deg, #b00, #f57d7d);"></button> 
-          <button class="barva" style="background: linear-gradient(135deg, #222, #8b8b8b);"></button> 
+          <button id="silver" class="barva" style="background: linear-gradient(135deg, #b1b1b1, #f5f5f5);" value="0"></button>
+          <button id="red" class="barva" style="background: linear-gradient(135deg, #b00, #f57d7d);" value="100000"></button> 
+          <button id="black" class="barva" style="background: linear-gradient(135deg, #222, #8b8b8b);" value="150000"></button> 
        </div>
       </div>
 
       <!--DIV S RADIO BUTTONY NA VÝBĚR TYPU PŘEVODOVKY-->
       <div id="transmission">
         <label style="display: flex; align-items: center; gap: 15px;">
-          <input id="automatic-transmission" name="volba" type="radio" value="automatic-transmission" checked> 
+          <input id="automatic-transmission" name="transmission-option" type="radio" value="0" checked> 
           <span class="custom-radio">Automatická převodovka</span>
         </label>
         <label style="display: flex; align-items: center; gap: 15px;">
-          <input id="manual-transmission" name="volba" type="radio" value="manual-transmission"> 
+          <input id="manual-transmission" name="transmission-option" type="radio" value="50000"> 
           <span class="custom-radio">Manuální převodovka</span>
         </label>
      </div>
