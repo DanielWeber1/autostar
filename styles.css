@@ -1,10 +1,12 @@
-body, div, button, label {
+body, div, button, label
+{
   background-color: rgb(255, 255, 255);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#menu-button {
-  width: 200px;
+#menu-button 
+{
+  width: 200px; 
   height: 80px;
   border-style: none;
   margin-right: 5px;
@@ -18,12 +20,14 @@ body, div, button, label {
   font-size: 40px;
 }
 
-.h1 {
+.h1
+{
   font-size: 50px;
   text-align: center;
 }
 
-.modal {
+.modal 
+{
   display: none;
   position: fixed;
   z-index: 10;
@@ -31,13 +35,14 @@ body, div, button, label {
   left: 50%;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
   background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
 }
 
-.modal-content {
+.modal-content 
+{
   background: white;
   padding: 30px;
   text-align: center;
@@ -47,7 +52,8 @@ body, div, button, label {
   clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 }
 
-.modal input[type="password"] {
+.modal input[type="password"] 
+{
   width: 80%;
   height: 50px;
   font-size: 40px;
@@ -55,7 +61,8 @@ body, div, button, label {
   text-align: center;
 }
 
-.modal button {
+.modal button 
+{
   padding: 35px 100px;
   color: black;
   font-size: 35px;
@@ -66,7 +73,8 @@ body, div, button, label {
   clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
 }
 
-#menu {
+#menu 
+{
   display: none;
   position: fixed;
   z-index: 10;
@@ -74,13 +82,14 @@ body, div, button, label {
   left: 50%;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
   background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
 }
 
-#menu-content {
+#menu-content 
+{
   background: white;
   padding: 30px;
   text-align: center;
@@ -94,7 +103,8 @@ body, div, button, label {
   align-items: center;
 }
 
-.choose-car {
+.choose-car
+{
   width: 300px;
   height: 85px;
   background-color: #cd1719;
@@ -105,156 +115,176 @@ body, div, button, label {
   font-weight: bold;
 }
 
-/* ---------------- RESPONSIVE ------------------- */
+/*-------------------------------------------------------------------------*/
 
-/* For large screens */
-@media (min-width: 1200px) {
-  #models {
-    height: 900px;
-  }
-
-  #configurator-price {
-    display: flex;
-    flex-direction: row;
-  }
-
-  #configurator {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  #wheels, #colors {
-    width: 800px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  #price {
-    width: 480px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #cd1719;
-    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
-  }
-
-  .slideshow-container {
-    width: 2030px;
-    height: 900px;
-  }
-
-  .slide {
-    width: 2030px;
-    height: 900px;
-  }
+#page
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
-/* For medium screens (tablets) */
-@media (max-width: 1200px) {
-  #models {
-    height: 600px;
-  }
-
-  #configurator-price {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #wheels, #colors {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .slideshow-container {
-    width: 100%;
-  }
-
-  .slide {
-    width: 100%;
-    height: auto;
-  }
-
-  .kolo, .barva {
-    width: 150px;
-    height: 150px;
-  }
-
-  #price {
-    width: 100%;
-  }
-
-  #menu-content, .modal-content {
-    width: 90%;
-    height: auto;
-  }
+#models 
+{
+  margin-top: 20px;
+  width: 100%;
+  height: 900px;
+  background-color: rgb(170, 170, 170);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
 }
 
-/* For small screens (phones) */
-@media (max-width: 800px) {
-  #menu-button {
-    width: 150px;
-    height: 60px;
-    font-size: 30px;
-  }
-
-  .h1 {
-    font-size: 30px;
-  }
-
-  #models {
-    height: 500px;
-  }
-
-  #configurator-price {
-    flex-direction: column;
-    height: auto;
-  }
-
-  #wheels, #colors {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .kolo, .barva {
-    width: 120px;
-    height: 120px;
-  }
-
-  #price {
-    width: 100%;
-  }
+#configurator-price 
+{
+  width: 89%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  height: 450px;
 }
 
-/* For extra small screens (very small phones) */
-@media (max-width: 480px) {
-  .h1 {
-    font-size: 24px;
-  }
-
-  #menu-button {
-    width: 120px;
-    height: 50px;
-    font-size: 20px;
-  }
-
-  .kolo, .barva {
-    width: 80px;
-    height: 80px;
-  }
-
-  #models {
-    height: 400px;
-  }
-
-  #configurator-price {
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  #price {
-    width: 100%;
-  }
+#configurator 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+#wheels, #colors 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 800px;
+}
+
+#colors
+{
+  margin-bottom: 10px;
+  height: 210px;
+}
+
+.kolo
+{
+  border-style: none;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(170,170,170);
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.kolo:active
+{
+  background-color: #cd1719;
+}
+
+.barva
+{
+  border-style: none;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+}
+
+
+.barva:active 
+{
+  border: 10px solid black;
+}
+
+#transmission
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  margin-left: 50px;
+}
+
+
+input[type="radio"] 
+{
+  display: none;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 37px;
+  font-weight: bold;
+  gap: 10px;
+}
+
+.custom-radio::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #cd1719;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+input[type="radio"]:checked + .custom-radio::before {
+  background-color: #cd1719;
+  border: 5px solid #cd1719;
+  box-shadow: inset 0 0 0 4px white;
+}
+
+
+
+#price 
+{
+  border-style: none;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #cd1719;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+#total-price
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 65px;
+}
+
+
+.slideshow-container {
+  position: relative;
+  width: 2030px;
+  height: 900px;
+}
+
+.slide {
+  display: none;
+  width: 2030px;
+  height: 900px;
+}
+
+.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 50px;
+  font-size: 50px;
+}
+
+.prev { left: 40px; }
+.next { right: 40px; }
