@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 const redButton = document.getElementById("red");
 const silverButton = document.getElementById("silver");
 const blackButton = document.getElementById("black");
