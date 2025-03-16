@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>autostar.eu - Konfigurátor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <img style="margin-left: 5px; width: 300px; height: 80px;" src="images/logo-black.png" alt="">
+    <button id="menu-button">
+      <p>MENU</p>
+    </button>
+  </div>
+
+  <!-- Modální okno pro zadání PINu -->
+  <div id="pin-modal" class="modal">
+    <div id="pinContent" class="modal-content">
+      <p>Zadejte PIN:</p>
+      <input type="password" id="pin-input" maxlength="4">
+      <button id="pin-submit">POTVRDIT</button>
+    </div>
+  </div>
+
+  <!-- Menu, které se zobrazí po správném PINu -->
+  <div id="menu" class="hidden">
+    <div id="menu-content">
+      <button class="choose-car" onclick="location.href='index.html'">BAIC X3</button>
+      <button class="choose-car" onclick="location.href='page2.html'">BAIC X5</button>
+      <button class="choose-car" onclick="location.href='page3.html'">BAIC X7</button>
+    </div>
+  </div>
+
+<!--nadpis-->
+<h1 class="h1">BAIC X7</h1>
+
+  <div id="page">
+    <!--DIV NA FOTKY AUT-->
+    <div id="models">
+      <div class="slideshow-container">
+        <img class="slide active" src="images/X7/X7_1.png" alt="Slide 1">
+        <img class="slide" src="images/X7/X7_2.png" alt="Slide 2">
+        <img class="slide" src="images/X7/X7_3.png" alt="Slide 3">
+        <img class="slide" src="images/X7/X7_4.png" alt="Slide 4">
+        <img class="slide" src="images/X7/X7_5.png" alt="Slide 5">
+        <img class="slide" src="images/X7/X7_6.png" alt="Slide 6">
+        <img class="slide" src="images/X7/X7_7.png" alt="Slide 7">
+        <img class="slide" src="images/X7/X7_8.png" alt="Slide 8">
+        <img class="slide" src="images/X7/X7_9.png" alt="Slide 9">
+    
+        <!-- Tlačítka pro posouvání -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!--SPODNÍ DIV S KONFIGURACÍ AUTA A CENOU-->
+    <div id="configurator-price">
+
+      <!--DIV NA KONFIGURACI AUTA-->
+      <div id="configurator">
+
+        <!--DIV S KOLY-->
+        <div id="wheels">
+          <button class="kolo"><img style="width: 300px;" src="images/auto 1/kola/kola1.png" alt=""></button>
+          <button class="kolo"><img style="width: 300px;" src="images/auto 1/kola/kola1.png" alt=""></button> 
+          <button class="kolo"><img style="width: 300px;" src="images/auto 1/kola/kola1.png" alt=""></button> 
+        </div>
+
+        <!--DIV S BARVAMI-->
+        <div id="colors">
+          <button id="silver" class="barva" style="background: linear-gradient(135deg, #b1b1b1, #f5f5f5);" value="0"></button>
+          <button id="red" class="barva" style="background: linear-gradient(135deg, #b00, #f57d7d);" value="100000"></button> 
+          <button id="black" class="barva" style="background: linear-gradient(135deg, #222, #8b8b8b);" value="150000"></button> 
+          <button id="blue" class="barva" style="background: linear-gradient(135deg, #0221f0, #8b8b8b);" value="150000"></button>
+       </div>
+      </div>
+
+     <!--DIV S CELKOVOU CENOU KONFIGURACE-->
+      <div id="price">
+        <p style="font-size: 50px;margin-left: 20px;">CENA:</p>
+        <p id="total-price">500 000 Kč</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

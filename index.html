@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>autostar.eu</title>
+  <title>autostar.eu - Konfigurátor</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="manifest" href="/manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,12 +29,14 @@
   <!-- Menu, které se zobrazí po správném PINu -->
   <div id="menu" class="hidden">
     <div id="menu-content">
-      <button class="choose-car">BAIC X3</button>
-      <button class="choose-car">BAIC X5</button>
-      <button class="choose-car">BAIC X7</button>
+      <button class="choose-car" onclick="location.href='index.html'">BAIC X3</button>
+      <button class="choose-car" onclick="location.href='page2.html'">BAIC X5</button>
+      <button class="choose-car" onclick="location.href='page3.html'">BAIC X7</button>
     </div>
   </div>
-  
+ 
+  <!--nadpis-->
+  <h1 class="h1">BAIC X3</h1>
 
   <div id="page">
     <!--DIV NA FOTKY AUT-->
@@ -48,7 +50,15 @@
         <!-- Tlačítka pro posouvání -->
         <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
-      </div>
+      </div>console.log("Page loaded");
+console.log("Menu button clicked");
+console.log("PIN modal opened");
+console.log("PIN submitted");
+console.log("Menu opened");
+console.log("Car model selected");
+console.log("Slide changed");
+console.log("Configuration changed");
+console.log("Price updated");
     </div>
 
     <!--SPODNÍ DIV S KONFIGURACÍ AUTA A CENOU-->
@@ -69,6 +79,7 @@
           <button id="silver" class="barva" style="background: linear-gradient(135deg, #b1b1b1, #f5f5f5);" value="0"></button>
           <button id="red" class="barva" style="background: linear-gradient(135deg, #b00, #f57d7d);" value="100000"></button> 
           <button id="black" class="barva" style="background: linear-gradient(135deg, #222, #8b8b8b);" value="150000"></button> 
+          <button id="blue" class="barva" style="background: linear-gradient(135deg, #0221f0, #8b8b8b);" value="150000"></button>
        </div>
       </div>
 
